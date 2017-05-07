@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mul Light</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon%20(1).ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+
+        .affix + .container-fluid {
+            padding-top: 70px;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        .panel {
+            margin-left: 2px !important;
+            margin-right: 2px !important;
+            border: 1px solid #d58512;
+            border-radius:0 !important;
+            transition: box-shadow 0.5s;
+        }
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+        .panel-heading {
+            color: #fff !important;
+            background-color: #d58512 !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .panel-body div, table, tr, td {
+            font-size: 25px;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #1b6d85;
+            z-index: 9999;
+            border: 0;
+            font-size: 17px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #1b6d85 !important;
+            background-color: #fff !important;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1b6d85;
+        }
+        .slideanim {visibility:hidden;}
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        @media screen and (max-width: 1600px) {
+
+            .panel-body div, table, tr, td {
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width: 1300px) {
+
+            .panel-body div, table, tr, td {
+                font-size: 15px;
+            }
+        }
+        @media screen and (max-width: 1300px) {
+
+            .panel-body div, table, tr, td {
+                font-size: 8px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            .panel-body div, table, tr, td {
+                 font-size: 15px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .panel-body div, table, tr, td {
+                font-size: 10px;
+            }
+
+        }
+    </style>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="70">
+
+<nav id="navbar_nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar" style="background: white"></span>
+                <span class="icon-bar" style="background: white"></span>
+                <span class="icon-bar" style="background: white"></span>
+            </button>
+            <a class="navbar-brand" onclick="window.location.href='http://www.mugroup.co.in'">mul light</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="window.location.href='http://www.mugroup.co.in#about'">ABOUT</a></li>
+                <li><a href="#product">PRODUCT</a></li>
+                <li><a onclick="window.location.href='http://www.mugroup.co.in#contact'">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Container (Services Section) -->
+<div id="product" class="container-fluid">
+    <div class="text-center">
+        <h1>Our Product</h1>
+    </div>
+    <div class="row slideanim">
+        <div id="FP-WG-20-30" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Well Glass</h1>
+                    <h3>Model No. FP-WG-20W &nbsp; FP-WG-30W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/03.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FP-WG-20W</td>
+                                <td>FP-WG-30W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>18W</td>
+                                <td>26W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>20W</td>
+                                <td>30W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>2430(135 lm/W)</td>
+                                <td>3432(132 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>190 Khrs</td>
+                                <td>180 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>Diffuser - 65MM/90MM</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB/IIC</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FP-WG-45-60" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Well Glass</h1>
+                    <h3>Model No. FP-WG-45W &nbsp; FP-WG-60W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/04.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FP-WG-45W</td>
+                                <td>FP-WG-60W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>39W</td>
+                                <td>54W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>45W</td>
+                                <td>60W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>5382(138 lm/W)</td>
+                                <td>6912(128 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>160 Khrs</td>
+                                <td>140 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>Diffuser - 65MM/90MM</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB/IIC</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FPS-BH-30-45" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Bulk Head</h1>
+                    <h3>Model No. FPS-BH-30W &nbsp; FPS-BH-45W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/06.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FPS-BH-30W</td>
+                                <td>FPS-BH-45W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>26W</td>
+                                <td>39W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>30W</td>
+                                <td>45W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>3432(132 lm/W)</td>
+                                <td>5382(138 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>180 Khrs</td>
+                                <td>160 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>Diffuser - 80MM</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB/IIC</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FPR-BH-30-45" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Round Bulk Head</h1>
+                    <h3>Model No. FPR-BH-30W &nbsp; FPR-BH-45W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/011.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FPR-BH-30W</td>
+                                <td>FPR-BH-45W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>26W</td>
+                                <td>39W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>30W</td>
+                                <td>45W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>3432(132 lm/W)</td>
+                                <td>5382(138 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>180 Khrs</td>
+                                <td>160 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>Diffuser - 80MM</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB/IIC</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FP-FWG-30" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Flat Well Glass</h1>
+                    <h3>Model No. FP-FWG-30W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/02.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FP-FWG-30W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>26W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>30W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>3432(132 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>180 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>Diffuser - 80MM</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FP-VL-15" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Vessel Lamp</h1>
+                    <h3>Model No. FP-VL-15W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/01.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FP-VL-15W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>13W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>15W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>1781(137 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>100 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>70&#8451; Lense</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FP-FL-100-160" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Flame Proof LED Flood Light</h1>
+                    <h3>Model No. FP-FL-100W &nbsp; FP-FL-160W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/07.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>FP-FL-100W</td>
+                                <td>FP-FL-160W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>90W</td>
+                                <td>146W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>100W</td>
+                                <td>160W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>10620(118 lm/W)</td>
+                                <td>19272(132 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>160 Khrs</td>
+                                <td>120 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>60&#8451; &nbsp; 90&#8451; &nbsp; 120&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>CMRI/CCOE/PESO Certification IIA/IIB/IIC</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="WP-HB-100-160" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Weather Proof LED Highbay Light</h1>
+                    <h3>Model No. WP-HB-100W &nbsp; WB-HB-160W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/012.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>WP-HB-100W</td>
+                                <td>WB-HB-160W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>90W</td>
+                                <td>146W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>100W</td>
+                                <td>160W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>10620(118 lm/W)</td>
+                                <td>19272(132 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>160 Khrs</td>
+                                <td>120 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>60&#8451; &nbsp; 90&#8451; &nbsp; 120&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="WP-WG-30-45" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Weather Proof LED Well GLass</h1>
+                    <h3>Model No. WP-WG-30W &nbsp; WB-WG-45W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/010.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>WP-WG-30W</td>
+                                <td>WB-WG-45W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>26W</td>
+                                <td>39W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>30W</td>
+                                <td>45W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>3432(132 lm/W)</td>
+                                <td>5382(138 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>180 Khrs</td>
+                                <td>160 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>Diffuser - 65MM/90MM</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>IP 65</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="WP-FL-60-100-120" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Weather Proof LED Flood Light</h1>
+                    <h3>Model No. WP-FL-60W &nbsp; WP-FL-100W &nbsp; WP-FL-120W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/014.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>WP-FL-60W</td>
+                                <td>WP-FL-100W</td>
+                                <td>WP-FL-120W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>54W</td>
+                                <td>90W</td>
+                                <td>112W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>60W</td>
+                                <td>100W</td>
+                                <td>120W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>6912(128 lm/W)</td>
+                                <td>10620(118 lm/W)</td>
+                                <td>12432(111 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>140 Khrs</td>
+                                <td>160 Khrs</td>
+                                <td>140 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>60&#8451; &nbsp; 90&#8451; &nbsp; 120&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>IP 65</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="WP-ST-45-60-100" class="col-sm-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Weather Proof LED Street Light</h1>
+                    <h3>Model No. WP-ST-45W &nbsp; WP-ST-60W &nbsp; WP-ST-100W</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="col-sm-4 col-xs-12 ">
+                        <img class="img-thumbnail" src="NewCatlog/05.jpg">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>WP-ST-45W</td>
+                                <td>WP-ST-60W</td>
+                                <td>WP-ST-100W</td>
+                            </tr>
+                            <tr>
+                                <td>LED Lamp wattage</td>
+                                <td>39W</td>
+                                <td>54W</td>
+                                <td>90W</td>
+                            </tr>
+                            <tr>
+                                <td>Fixture wattage</td>
+                                <td>45W</td>
+                                <td>60W</td>
+                                <td>100W</td>
+                            </tr>
+                            <tr>
+                                <td>Lumens</td>
+                                <td>5382(128 lm/W)</td>
+                                <td>6917(128 lm/W)</td>
+                                <td>10620(118 lm/W)</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp life</td>
+                                <td>160 Khrs</td>
+                                <td>140 Khrs</td>
+                                <td>160 Khrs</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                                <td>6500k/5000k</td>
+                            </tr>
+                            <tr>
+                                <td>CRI</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                                <td>70RA/65RA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <td>Primary Optics</td>
+                                <td>160&#8451;*60&#8451; &nbsp; 140&#8451;*60&#8451; &nbsp; 120&#8451;*60&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>Class-T6/T Case -< 82&#8451;</td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td>90-295 V AC</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure</td>
+                                <td>PDC Aluminum Alloy LM-06</td>
+                            </tr>
+                            <tr>
+                                <td>Approval</td>
+                                <td>IP 65</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td>COB LED(Citizen Japan)</td>
+                            </tr>
+                            <tr>
+                                <td>Driver</td>
+                                <td>Meanwell, Philips, Fulham, Pyrotech</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>2/3/5 Years*</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Go to Top</p>
+</footer>
+
+<script>
+    $(document).ready(function(){
+
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+
+        $(window).scroll(function() {
+            $(".slideanim").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                }
+            });
+
+        });
+    });
+</script>
+
+</body>
+</html>
