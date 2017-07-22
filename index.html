@@ -2517,8 +2517,8 @@
 <script>
     $(document).ready(function(){
 
-        document.getElementById("cover-image").style.height = (window.screen.availHeight).toString()+"px";
-        document.getElementById("navigation").setAttribute("data-offset-top",(window.screen.availHeight).toString());
+        document.getElementById("cover-image").style.height = (window.innerHeight).toString()+"px";
+        document.getElementById("navigation").setAttribute("data-offset-top",(window.innerHeight).toString());
         $("#navigation-bar").affix('checkPosition');
 
         // Add smooth scrolling to all links in navbar + footer link
