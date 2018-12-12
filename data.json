@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "model": "FP-WG",
+      "image" : "NewCatlog/01.jpg",
+      "elementCount" : 2,
+      "watt": [
+        20,
+        30
+      ],
+      "ledWatt": [
+        18,
+        26
+      ],
+      "lumens": [
+        "2430(135 lm/W)",
+        "3432(132 lm/W)"
+      ],
+      "lampLife": [
+        "190 Khrs",
+        "180 Khrs"
+      ],
+      "color": [
+        "6500k/5000k",
+        "6500k/5000k"
+      ],
+      "cri": [
+        "70RA/65RA",
+        "70RA/65RA"
+      ],
+      "primaryOptics": "Diffuser - 65MM/90MM",
+      "temperature": "Class-T6/T Case -< 82℃",
+      "input": "90-295 V AC",
+      "enclosure": "PDC Aluminum Alloy LM-06",
+      "approval": "CMRI/CCOE/PESO Certification IIA/IIB/IIC",
+      "lamp": "COB LED(Citizen Japan)",
+      "driver": "Meanwell, Philips, Fulham, Pyrotech",
+      "warranty": "2/3/5 Years*"
+    },
+    {
+      "model": "FP-WG",
+      "image" : "NewCatlog/02.jpg",
+      "elementCount" : 2,
+      "watt": [
+        30,
+        45
+      ],
+      "ledWatt": [
+        26,
+        39
+      ],
+      "lumens": [
+        "3432(132 lm/W)",
+        "5382(138 lm/W)"
+      ],
+      "lampLife": [
+        "160 Khrs",
+        "140 Khrs"
+      ],
+      "color": [
+        "6500k/5000k",
+        "6500k/5000k"
+      ],
+      "cri": [
+        "70RA/65RA",
+        "70RA/65RA"
+      ],
+      "primaryOptics": "Diffuser - 65MM/90MM",
+      "temperature": "Class-T6/T Case -< 82℃",
+      "input": "90-295 V AC",
+      "enclosure": "PDC Aluminum Alloy LM-06",
+      "approval": "CMRI/CCOE/PESO Certification IIA/IIB/IIC",
+      "lamp": "COB LED(Citizen Japan)",
+      "driver": "Meanwell, Philips, Fulham, Pyrotech",
+      "warranty": "2/3/5 Years*"
+    }
+  ]
+}

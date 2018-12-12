@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function loadData() {
+            var dataElement = document.getElementById("data");
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', 'data.json', true); // Replace 'my_data' with the path to your file
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                    console.log(JSON.parse(xobj.responseText));
+                    var data = JSON.parse(xobj.responseText)["products"];
+                    for (var element in data){
+                        var parent = document.createElement("table");
+                        var row0 = document.createElement("tr");
+                        var child0 = document.createElement("td");
+                        var child1 = document.createElement("td");
+
+                        var child = document.createElement("table");
+                        var rowheaders = document.createElement("tr");
+                        var ledWatt = document.createElement("tr");
+                        var lumens = document.createElement("tr");
+                        var lampLife = document.createElement("tr");
+                        var color = document.createElement("tr");
+                        var cri = document.createElement("tr");
+
+                        var headers = document.createElement("td");
+                        rowheaders.appendChild(headers);
+                        headers = document.createElement("td");
+                        headers.innerText = "Led Watt";
+                        ledWatt.appendChild(headers);
+                        headers = document.createElement("td");
+                        headers.innerText = "Lumens";
+                        lumens.appendChild(headers);
+                        headers = document.createElement("td");
+                        headers.innerText = "Lamp Life";
+                        lampLife.appendChild(headers);
+                        headers = document.createElement("td");
+                        headers.innerText = "Color";
+                        color.appendChild(headers);
+                        headers = document.createElement("td");
+                        headers.innerText = "CRI";
+                        cri .appendChild(headers);
+
+                        for (var i = 0; i<data[element]["elementCount"]; i++) {
+                            var td = document.createElement("td");
+                            td.innerText = data[element]["model"] + "-" + data[element]["watt"][i];
+                            rowheaders.appendChild(td);
+                            td = document.createElement("td");
+                            td.innerText = data[element]["ledWatt"];
+                            ledWatt.appendChild(td);
+                            td = document.createElement("td");
+                            td.innerText = data[element]["lumens"];
+                            lumens.appendChild(td);
+                            td = document.createElement("td");
+                            td.innerText = data[element]["lampLife"];
+                            lampLife.appendChild(td);
+                            td = document.createElement("td");
+                            td.innerText = data[element]["color"];
+                            color.appendChild(td);
+                            td = document.createElement("td");
+                            td.innerText = data[element]["cri"];
+                            cri.appendChild(td);
+                        }
+                        child.appendChild(rowheaders);
+                        child.appendChild(ledWatt);
+                        child.appendChild(lumens);
+                        child.appendChild(lampLife);
+                        child.appendChild(color);
+                        child.appendChild(cri);
+                        child0.appendChild(child);
+
+                        child = document.createElement("table");
+                        var primaryOptics = document.createElement("tr");
+                        var temperature = document.createElement("tr");
+                        var input = document.createElement("tr");
+                        var enclosure = document.createElement("tr");
+                        var approval = document.createElement("tr");
+                        var lamp = document.createElement("tr");
+                        var driver = document.createElement("tr");
+                        var warranty = document.createElement("tr");
+
+                        var childElement = document.createElement("td");
+                        childElement.innerText = "Primary Optics";
+                        primaryOptics.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["primaryOptics"];
+                        primaryOptics.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Temperature";
+                        temperature.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["temperature"];
+                        temperature.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Input";
+                        input.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["input"];
+                        input.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Enclosure";
+                        enclosure.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["enclosure"];
+                        enclosure.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Approval";
+                        approval.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["approval"];
+                        approval.appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Lamp";
+                        lamp .appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["lamp"];
+                        lamp .appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Driver";
+                        driver .appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["driver"];
+                        driver .appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = "Warranty";
+                        warranty .appendChild(childElement);
+                        childElement = document.createElement("td");
+                        childElement.innerText = data[element]["warranty"];
+                        warranty .appendChild(childElement);
+
+                        child.appendChild(primaryOptics);
+                        child.appendChild(temperature);
+                        child.appendChild(input);
+                        child.appendChild(enclosure);
+                        child.appendChild(approval);
+                        child.appendChild(lamp);
+                        child.appendChild(driver);
+                        child.appendChild(warranty);
+                        child1.appendChild(child);
+
+                        row0.appendChild(child0);
+                        row0.appendChild(child1);
+
+                        parent.appendChild(row0);
+                        dataElement.appendChild(parent);
+                    }
+                }
+            };
+            xobj.send(null);
+        }
+    </script>
+</head>
+<body onload="loadData()">
+<div id="data"></div>
+</body>
+</html>
